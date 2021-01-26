@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        $(function() {
+        });
+    </script>
+    
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            background-image: url(img/bg_univers.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+        }
+        
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        
+        #title {
+            top: 41px;
+            left: 30px;
+            z-index: 1;
+        }
+        
+        #moon {
+            -webkit-animation: orbit 8s linear infinite;
+        }
+        @-webkit-keyframes orbit {
+            0% { -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg) scale(0.75);}
+            25% { -webkit-transform: rotate(90deg) translateX(100px) rotate(-90deg) scale(1);}
+            50% { -webkit-transform: rotate(180deg) translateX(100px) rotate(-180deg) scale(0.75);}
+            75% { -webkit-transform: rotate(270deg) translateX(100px) rotate(-270deg) scale(0.5);}
+            100% { -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg) scale(0.75);}
+        }
+        #moon-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-38px, -38px);
+        }
+        
+        #earth {
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-71px, -72px);
+        }
+    </style>
+</head>
+<body>
+    <!-- title画像 -->
+    <img src="img/title.png" width="101" height="12" id="title">
+    
+    <!-- 天体 -->
+    <div id="moon-wrapper">
+        <img src="img/planet_moon.png" width="76" height="77" id="moon">
+    </div>
+    <img src="img/planet_earth.png" width="142" height="142" id="earth">
+</body>
+</html>
